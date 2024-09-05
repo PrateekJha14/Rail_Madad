@@ -1,0 +1,143 @@
+.chatbotInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5ebed;
+  border-radius: 30px;
+  padding: 15px 20px; /* Adequate padding for larger screens */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon, .arrow {
+  width: 34px; /* Larger icon size for bigger screens */
+  height: 34px; /* Matching width and height for consistency */
+  color: #7a003b;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  font-size: 20px; /* Larger font size for better readability */
+  color: #7a003b;
+  outline: none;
+  padding: 5px 5px 5px 35px;
+}
+
+.input::placeholder {
+  color: #7a003b;
+  opacity: 0.6;
+}
+
+.chatbotInput:hover {
+  background-color: #ead4d8;
+}
+
+/* Media Query for Medium Screens */
+@media (max-width: 768px) {
+  .chatbotInput {
+    padding: 12px 18px; /* Slightly reduce padding for medium screens */
+    border-radius: 25px;
+    margin: 20px;
+  }
+
+  .icon, .arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
+  }
+}
+
+@media (max-width: 960px) {
+  .chatbotInput {
+    padding: 15px 21px; /* Slightly reduce padding for medium screens */
+    border-radius: 25px;
+    margin: 25px;
+  }
+
+  .icon, .arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
+  }
+}
+@media (max-width: 768px) {
+  .chatbotInput {
+    padding: 12px 18px; /* Slightly reduce padding for medium screens */
+    border-radius: 25px;
+    margin: 20px;
+  }
+
+  .icon, .arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
+  }
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 480px) {
+  .chatbotInput {
+    padding: 10px 15px; /* Further reduce padding for small screens */
+    border-radius: 20px;
+    margin: 10px; /* Reduce margin for small screens */
+    /* border: 2px solid black; */
+    width: 90vw;
+    
+    
+  }
+
+  .icon, .arrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .input {
+    font-size: 16px;
+    padding: 5px 5px 5px 15px;
+  }
+}
+
+/* Media Query for Very Small Screens */
+@media (max-width: 360px) {
+  .chatbotInput {
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin: 8px;
+
+  }
+
+  .icon, .arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 5px 5px 5px 10px;
+  }
+}
