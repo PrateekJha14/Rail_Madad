@@ -1,0 +1,132 @@
+/* Container for the whole section */
+.container {
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 24px;
+  max-width: 960px; /* Max-width for large screens */
+}
+
+/* Welcome section */
+.welcome {
+  color: #000;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Container for the questions - Now scrollable */
+.questionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding: 10px 0;
+  margin-bottom: 30px;
+  width: 100vw; /* Ensure it doesn’t exceed the container width */
+  scroll-behavior: smooth;
+
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.questionContainer::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Each individual question box */
+.que {
+  padding: 8px;
+  border-radius: 8px;
+  background: #f7f7f7;
+  min-width: 150px;
+  max-width: 220px;
+  min-height: 120px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Container for the buttons */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo styles */
+.logo {
+  max-width: 160px;
+  margin: 0px;
+}
+
+/* Style for each button */
+.button {
+  padding: 15px 20px;
+  width: 240px;
+  border-radius: 10px;
+  background: #a71e34;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+  background: #7c1729;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .que {
+    max-width: 160px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .welcome {
+    font-size: 1.5rem; /* Further reduction for very small screens */
+  }
+
+  .que {
+    max-width: 150px;
+    font-size: 12px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
