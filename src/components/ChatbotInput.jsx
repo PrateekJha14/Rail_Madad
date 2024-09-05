@@ -58,7 +58,7 @@ const ChatbotInput = () => {
         placeholder="Enter Your Complaints"
         className={styles.input}
       />
-      <MdArrowUpward className={styles.arrow} /> {/* Upward Arrow Icon */}
+      <MdArrowUpward  className={styles.arrow} /> {/* Upward Arrow Icon */}
 
       {/* Hidden file input */}
       <input

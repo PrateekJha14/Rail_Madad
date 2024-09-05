@@ -25,11 +25,11 @@ function ChatScreen() {
           />
         </div>
 
-        <div className={styles.buttonContainer}>
+        {/* <div className={styles.buttonContainer}>
           <Button taskName="Submit a Video" />
           <Button taskName="Submit an Image" />
           <Button taskName="Talk to AI" />
-        </div>
+        </div> */}
       </div>
     </>
   )
