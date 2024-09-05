@@ -150,6 +150,14 @@
     /* align-items: ; */
     gap: 2px;
   }
+  .header{
+    margin-top: 0px;
+    padding: 0px;
+    /* border: 2px solid brown; */
+  }
+  .languageSelect{
+    max-height: 24px;
+  }
 
   .number {
     font-size: 24px;

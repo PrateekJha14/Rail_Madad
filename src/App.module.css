@@ -7,13 +7,23 @@ body{
   
 }
 .app {
- 
+ padding: 0;
 overflow: hidden;
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 480px) {
   .app {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    margin: 0;
+    
+    padding-top: 0px;
+    margin-top: 0px;
   }
 }
