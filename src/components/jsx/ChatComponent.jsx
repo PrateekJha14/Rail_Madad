@@ -7,7 +7,7 @@ const ChatComponent = () => {
 
   // Send user message and receive chatbot response
   const sendMessage = async (userMessage) => {
-    const userChat = { user: userMessage, bot: "danish bhai zinda hote toh aaj SIH me hote" };
+    const userChat = { user: userMessage, bot: "Hi! How can I assist you." };
     setMessages((prevMessages) => [...prevMessages, userChat]);
 
     try {
@@ -23,9 +23,11 @@ const ChatComponent = () => {
       const botMessage = { user: userMessage, bot: data.response };
 
       // Update the chatbot response once received
-      setMessages((prevMessages) => prevMessages.map(
-        (msg, index) => index === prevMessages.length - 1 ? botMessage : msg
-      ));
+      setMessages((prevMessages) =>
+        prevMessages.map((msg, index) =>
+          index === prevMessages.length - 1 ? botMessage : msg
+        )
+      );
     } catch (error) {
       console.error("Error communicating with chatbot:", error);
     }
@@ -35,9 +37,15 @@ const ChatComponent = () => {
     <div className={styles.chatContainer}>
       <div className={styles.chatWindow}>
         {messages.map((message, index) => (
-          <div key={index} className={styles.chatMessage}>
-            <p><strong>You:</strong> {message.user}</p>
-            <p><strong>Bot:</strong> {message.bot}</p>
+          <div key={index} className={styles.messageContainer}>
+            {/* User Message */}
+            <div className={styles.userMessage}>
+              <p><strong>You:</strong> {message.user}</p>
+            </div>
+            {/* Bot Message */}
+            <div className={styles.botMessage}>
+              <p><strong>Bot:</strong> {message.bot}</p>
+            </div>
           </div>
         ))}
       </div>

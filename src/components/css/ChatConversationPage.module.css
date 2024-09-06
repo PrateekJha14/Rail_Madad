@@ -1,0 +1,16 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+  }
+  
+  .header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #7a003b;
+    text-align: center;
+  }
+  

@@ -37,7 +37,6 @@ const ChatbotInput = ({ onSendMessage }) => {
 
   const handleSubmit = () => {
     if (userMessage.trim()) {
-      console.log("kya dalu")
       onSendMessage(userMessage);
       setUserMessage("");  // Clear the input field after sending the message
     }
@@ -49,6 +48,8 @@ const ChatbotInput = ({ onSendMessage }) => {
         <MdPhotoLibrary onClick={() => handleIconClick()} className={styles.icon} />
         <MdCameraAlt onClick={() => handleIconClick("camera")} className={styles.icon} />
       </div>
+
+      {/* Input field with rounded style */}
       <input
         type="text"
         placeholder="Enter Your Complaints"
@@ -56,7 +57,11 @@ const ChatbotInput = ({ onSendMessage }) => {
         value={userMessage}
         onChange={(e) => setUserMessage(e.target.value)}
       />
-      <MdArrowUpward className={styles.arrow} onClick={handleSubmit} />
+
+      {/* Send Button styled like an upward arrow inside a circle */}
+      <div className={styles.sendButton} onClick={handleSubmit}>
+        <MdArrowUpward className={styles.arrow} />
+      </div>
 
       {/* Hidden file input */}
       <input

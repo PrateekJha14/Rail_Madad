@@ -1,8 +1,9 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import styles from '../css/Header.module.css';
-import satyamev from '../../assets/satyamev-jayate.png'
+import satyamev from '../../assets/satyamev-jayate.png';
+
 const Header = () => {
-    const [selectedLanguage, setSelectedLanguage] = useState('English');
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -18,17 +19,20 @@ const Header = () => {
           className={styles.logo}
         />
         <div className={styles.titleContainer}>
-            <div className="leftHeader">
-          <h1 className={styles.title}>RailMadad</h1>
-          <p className={styles.subtitle}>
-            For Inquiry, Assistance & Grievance Redressal
-          </p>
+          <div className="leftHeader">
+            <h1 className={styles.title}>RailMadad</h1>
+            <p className={styles.subtitle}>
+              For Inquiry, Assistance & Grievance Redressal
+            </p>
           </div>
         </div>
       </div>
       <div className={styles.rightSection}>
         <div className={styles.assistance}>
-          <span className={styles.number}>139</span>
+          {/* Use anchor tag with tel: */}
+          <a href="tel:139" className={styles.number}>
+            139
+          </a>
           <span className={styles.assistanceText}>for Security/Medical Assistance</span>
         </div>
         <select
