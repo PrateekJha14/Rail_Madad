@@ -4,7 +4,7 @@
   justify-content: space-between;
   background-color: #f5ebed;
   border-radius: 30px;
-  padding: 15px 20px; /* Adequate padding for larger screens */
+  padding: 15px 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   width: 100%;
@@ -21,8 +21,8 @@
 }
 
 .icon, .arrow {
-  width: 34px; /* Larger icon size for bigger screens */
-  height: 34px; /* Matching width and height for consistency */
+  width: 34px;
+  height: 34px;
   color: #7a003b;
 }
 
@@ -30,7 +30,7 @@
   border: none;
   background-color: transparent;
   flex-grow: 1;
-  font-size: 20px; /* Larger font size for better readability */
+  font-size: 20px;
   color: #7a003b;
   outline: none;
   padding: 5px 5px 5px 35px;
@@ -45,170 +45,8 @@
   background-color: #ead4d8;
 }
 
-/* Media Query for Medium Screens */
-@media (max-width: 768px) {
-  .chatbotInput {
-    padding: 12px 18px; /* Slightly reduce padding for medium screens */
-    border-radius: 25px;
-    margin: 20px;
-  }
-
-  .icon, .arrow {
-    width: 28px;
-    height: 28px;
-  }
-
-  .input {
-    font-size: 18px;
-    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
-  }
-}
-
-@media (max-width: 960px) {
-  .chatbotInput {
-    padding: 15px 21px; /* Slightly reduce padding for medium screens */
-    border-radius: 25px;
-    margin: 25px;
-  }
-
-  .icon, .arrow {
-    width: 28px;
-    height: 28px;
-  }
-
-  .input {
-    font-size: 18px;
-    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
-  }
-}
-@media (max-width: 768px) {
-  .chatbotInput {
-    padding: 12px 18px; /* Slightly reduce padding for medium screens */
-    border-radius: 25px;
-    margin: 20px;
-  }
-
-  .icon, .arrow {
-    width: 28px;
-    height: 28px;
-  }
-
-  .input {
-    font-size: 18px;
-    padding: 5px 5px 5px 20px; /* Adjust padding for medium screens */
-  }
-}
-
-/* Media Query for Small Screens */
-@media (max-width: 480px) {
-  .chatbotInput {
-    padding: 10px 15px; /* Further reduce padding for small screens */
-    border-radius: 20px;
-    margin: 10px; /* Reduce margin for small screens */
-    /* border: 2px solid black; */
-    width: 90vw;
-    
-    
-  }
-
-  .icon, .arrow {
-    width: 22px;
-    height: 22px;
-  }
-
-  .input {
-    font-size: 16px;
-    padding: 5px 5px 5px 15px;
-  }
-}
-
-/* Media Query for Very Small Screens */
-@media (max-width: 360px) {
-  .chatbotInput {
-    padding: 10px 10px;
-    border-radius: 15px;
-    margin: 8px;
-
-  }
-
-  .icon, .arrow {
-    width: 20px;
-    height: 20px;
-  }
-
-  .input {
-    font-size: 14px;
-    padding: 5px 5px 5px 10px;
-  }
-}
-
-.chatInputContainer {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-}
-
-.chatInput {
-  flex-grow: 1;
-  border-radius: 20px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background-color: #f5f5f5;
-  font-size: 16px;
-}
-
-.uploadIcon {
-  margin-right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.sendIcon {
-  margin-left: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #900C3F; /* Match the arrow color */
-}
-
-.chatbotInput {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #f3f3f5; /* Adjust background color */
-  border-radius: 50px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 90%;
-  margin: 20px auto; /* Center the input */
-}
-
-.iconContainer {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.icon {
-  font-size: 24px;
-  color: #b93b62; /* Adjust icon color */
-  cursor: pointer;
-}
-
-.input {
-  flex-grow: 1;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 50px;
-  outline: none;
-  margin-left: 10px;
-}
-
 .sendButton {
-  background-color: #b93b62; /* Circle background color */
+  background-color: #b93b62;
   color: white;
   border-radius: 50%;
   width: 40px;
@@ -217,14 +55,62 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .arrow {
   font-size: 24px;
 }
 
-/* For file input */
-input[type="file"] {
-  display: none;
+/* Image Preview */
+.imagePreviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePreview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.captionInput {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #7a003b;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.captionInput::placeholder {
+  color: #7a003b;
+  opacity: 0.6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .imagePreview {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .captionInput {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagePreview {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .captionInput {
+    font-size: 12px;
+  }
 }
