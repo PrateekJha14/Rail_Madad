@@ -34,6 +34,8 @@ const ChatComponent = () => {
   };
 
   return (
+    <>
+    {/* <ComlaintRegister onSendMessage={sendMessage} /> */}
     <div className={styles.chatContainer}>
       <div className={styles.chatWindow}>
         {messages.map((message, index) => (
@@ -50,8 +52,10 @@ const ChatComponent = () => {
         ))}
       </div>
       
-      <ChatbotInput onSendMessage={sendMessage} />
+      
+      {/* <ChatbotInput onSendMessage={sendMessage} /> */}
     </div>
+    </>
   );
 };
 

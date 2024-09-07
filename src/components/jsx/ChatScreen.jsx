@@ -4,6 +4,7 @@ import Welcome from './Welcome'
 import Question from './Question'
 import Button from './Button'
 import ChatbotInput from './ChatbotInput'
+import ComplaintRegister from "./ComplaintRegister";
 
 function ChatScreen() {
   const [messages, setMessages] = useState([]);  // Initialize messages state
@@ -68,6 +69,7 @@ function ChatScreen() {
           </div>
 
           {/* Chatbot input will always be visible */}
+          <ComplaintRegister  />
           <ChatbotInput onSendMessage={sendMessage} />
         </div>
       ) : (
